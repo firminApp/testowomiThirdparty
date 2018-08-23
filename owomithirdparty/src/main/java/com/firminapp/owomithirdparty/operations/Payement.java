@@ -29,14 +29,13 @@ public class Payement extends Operation{
     private String destinataire;
     private String formString;
     private String referenceExterne;
-    public Payement(Bundle data,
-                    String sdkId,
+    public Payement(String sdkId,
                     String codeProduit,
                     String montant,
                     String destinataire,
                     String formString,
                     String referenceExterne) {
-        super(data, sdkId);
+        super(sdkId);
         this.setOperationType(OperationType.PAYEMENT);
         this.codeProduit=codeProduit;
         this.destinataire=destinataire;
@@ -44,11 +43,11 @@ public class Payement extends Operation{
         this.formString=formString;
         this.referenceExterne=referenceExterne;
 
-        data.putString(CODE_PRODUIT_KEY,codeProduit);
-        data.putString(MONTANT_KEY,montant);
-        data.putString(DESTINATAIRE_KEY,destinataire);
-        data.putString(FORMSTRING_KEY,formString);
-        data.putString(REFERENCE_EXTERNE_KEY,referenceExterne);
+        this. getData().putString(CODE_PRODUIT_KEY,codeProduit);
+        this. getData().putString(MONTANT_KEY,montant);
+        this. getData().putString(DESTINATAIRE_KEY,destinataire);
+        this. getData().putString(FORMSTRING_KEY,formString);
+        this. getData().putString(REFERENCE_EXTERNE_KEY,referenceExterne);
     }
 
     public String getCodeProduit() {

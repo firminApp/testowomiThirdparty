@@ -12,11 +12,10 @@ public class Authientification extends Operation {
     /**
      * superclass of operations
      *
-     * @param data  data need to procced th operation
      * @param sdkId to identifie the sdk which init this operation
      */
-    public Authientification(Bundle data, String sdkId) {
-        super(data, sdkId);
+    public Authientification(String sdkId) {
+        super(sdkId);
         this.setOperationType(OperationType.AUTHENTIFICATION);
     }
 }

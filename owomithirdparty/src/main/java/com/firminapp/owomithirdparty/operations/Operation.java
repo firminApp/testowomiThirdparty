@@ -16,11 +16,10 @@ public abstract class Operation {
     /**
      * superclass of operations
      *
-     * @param data data need to procced th operation
      * @param sdkId to identifie the sdk which init this operation
      */
-    public Operation(Bundle data, String sdkId) {
-        this.data = data;
+    public Operation(String sdkId) {
+        this.data = new Bundle();
         this.sdkId = sdkId;
     }
 
